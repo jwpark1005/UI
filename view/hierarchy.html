@@ -43,11 +43,11 @@
         var children = element.children;
         var len = children.length;
 
-        for(var i=0; i<len; i++) {
+        for (var i = 0; i < len; i++) {
             var setChild = setElement(children[i]);
             setObject.children.push(setChild);
 
-            if(children[i].childElementCount > 0) {
+            if (children[i].childElementCount > 0) {
                 var temp = this.getChild(children[i]);
                 setChild.children.push(temp);
             }
