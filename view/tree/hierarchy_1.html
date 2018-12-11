@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tree</title>
+</head>
+<style>
+    /* Remove default bullets */
+    ul, #myUL {
+        list-style-type: none;
+    }
+
+    /* Remove margins and padding from the parent ul */
+    #myUL {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Style the caret/arrow */
+    .caret {
+        cursor: pointer;
+        user-select: none; /* Prevent text selection */
+    }
+
+    /* Create the caret/arrow with a unicode, and style it */
+    .caret::before {
+        content: "\25B6";
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+    }
+
+    /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+    .caret-down::before {
+        transform: rotate(90deg);
+    }
+
+    /* Hide the nested list */
+    .nested {
+        display: none;
+    }
+
+    /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+    .active {
+        display: block;
+    }
+</style>
+<body>
+<input id="text" type="text" placeholder="추가할 노드의 이름을 입력해 주세요.">
+<button onclick="_onADdNode()"> + </button>
+<button> 전체노드 추가 </button>
+<button> 선택노드 추가 </button>
+<!--<ul id="myUL">
+    <li><span class="caret">Beverages</span>
+        <ul class="nested">
+            <li>Water</li>
+            <li>Coffee</li>
+            <li><span class="caret">Tea</span>
+                <ul class="nested">
+                    <li>Black Tea</li>
+                    <li>White Tea</li>
+                    <li><span class="caret">Green Tea</span>
+                        <ul class="nested">
+                            <li>Sencha</li>
+                            <li>Gyokuro</li>
+                            <li>Matcha</li>
+                            <li>Pi Lo Chun</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>-->
+</body>
+<script>
+    var toggler = document.getElementsByClassName("caret");
+    var result;
+    var self = this;
+    var i;
+
+    for (i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+
+            self.result = self.getChild(document.body);
+            console.log(self.result);
+        });
+    }
+
+    function getChild(element) {
+        var setObject = this.setElement(element);
+        var setChild;
+
+        var children = element.children;
+        var len = children.length;
+
+        for (var i = 0; i < len; i++) {
+            if(children[i].classList == 'nested')
+            if (children[i].childElementCount > 0) {
+                setChild = this.getChild(children[i]);
+                setObject.children.push(setChild);
+            } else {
+                setChild = this.setElement(children[i]);
+                setObject.children.push(setChild);
+            }
+        }
+
+        return setObject;
+    }
+
+    function setElement(element) {
+        var setObject = {};
+
+        setObject["title"] = element.nodeName;
+        setObject["element"] = element;
+        setObject["children"] = [];
+
+        return setObject;
+    }
+
+    function _onADdNode() {
+        var text = document.querySelector('#text').value;
+
+        var
+    }
+</script>
+</html>

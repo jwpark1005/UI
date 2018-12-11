@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tree</title>
+</head>
+<style>
+    #text {
+        width: 400px;
+    }
+
+    #text button {
+        margin-top: 10px;
+    }
+    button {
+        display: block;
+    }
+
+</style>
+<body>
+    <input id="text" type="text" placeholder="추가할 노드의 이름을 입력해 주세요.">
+    <button onclick="_onADdNode()"> + </button>
+    <button> 전체노드 추가 </button>
+    <button> 선택노드 추가 </button>
+</body>
+<script>
+    var toggler = document.getElementsByClassName("caret");
+    var result;
+    var self = this;
+    var i;
+
+    for (i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+
+            self.result = self.getChild(document.body);
+            console.log(self.result);
+        });
+    }
+
+    function getChild(element) {
+        var setObject = this.setElement(element);
+        var setChild;
+
+        var children = element.children;
+        var len = children.length;
+
+        for (var i = 0; i < len; i++) {
+            if(children[i].classList == 'nested')
+            if (children[i].childElementCount > 0) {
+                setChild = this.getChild(children[i]);
+                setObject.children.push(setChild);
+            } else {
+                setChild = this.setElement(children[i]);
+                setObject.children.push(setChild);
+            }
+        }
+
+        return setObject;
+    }
+
+    function setElement(element) {
+        var setObject = {};
+
+        setObject["title"] = element.nodeName;
+        setObject["element"] = element;
+        setObject["children"] = [];
+
+        return setObject;
+    }
+
+    function _onADdNode() {
+        var text = document.querySelector('#text').value;
+    }
+
+</script>
+</html>
