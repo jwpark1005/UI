@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tree</title>
+</head>
+<style>
+    #searchTab {
+        margin-bottom: 10px;
+        min-width: 240px;
+    }
+
+    #content {
+        position: relative;
+        border: 1px solid black;
+        overflow: auto;
+        min-width: 500px;
+        height: 500px;
+    }
+
+    span {
+        background-color: yellow;
+        color: black;
+        font-weight: bold;
+    }
+
+    Button {
+        width: 43px;
+        height: 25px;
+    }
+
+    #prevButton + #nextButton, #nextButton + #exitButton {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+</style>
+<body>
+<div id="searchTab">
+    <input type="text" id="searchWord" onkeypress="_onEnterKey()" placeholder="찾을 단어를 입력하세요.">
+    <button onclick="_onSearch()"> 검색</button>
+</div>
+<div id="content">
+    [골닷컴] 박문수 기자 = "나였다면, 모드리치가 아닌 호날두에게 상을 줬을 것이다"
+    1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.
+    1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.
+    1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.  1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.  1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.  1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다. 레레렐
+    [골닷컴] 박문수 기자 = "나였다면, 모드리치가 아닌 호날두에게 상을 줬을 것이다"
+    1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.
+    1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.
+    1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.  1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.  1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.  1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.
+    [골닷컴] 박문수 기자 = "나였다면, 모드리치가 아닌 호날두에게 상을 줬을 것이다"
+    1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.
+    1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.
+    1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.  1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.  1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 들지 못한 것에 대해서도
+    의문이라고 말했다.  1999년 발롱도르 위너이자 브라질 레전드 히바우두가 이번 년도 발롱도르에 대해 모드리치가 아닌 호날두가 탔어야 한다고 말했다.
+    또한 히바우두는 리오넬 메시가 발롱도르 탑 3안에 레레렐 들지 못한 것에 대해서도
+    의문이라고 말했다.
+</div>
+</body>
+<script>
+    var searchCurrent = 0;
+    var firstSearch = true;
+
+    function _onEnterKey() {
+        event.stopPropagation();
+
+        if (event.keyCode === 13) {
+            this._onSearch();
+        }
+    }
+
+    function _onSearch() {
+        var searchWord = document.querySelector('#searchWord').value;
+        var searchTab = document.querySelector('#searchTab');
+        var content = document.querySelector('#content');
+        var contents = content.outerText;
+
+        var replaceWord = searchWord.replace(/\s/gi, '');
+
+        // 띄어쓰기 체크
+        if (!replaceWord) {
+            alert('검색어를 입력해 주세요.')
+            return;
+        }
+        var repalceTag = '<span class="find">' + replaceWord + '</span>';
+
+        var modifyContent = replaceAll(contents, searchWord, repalceTag);
+        content.innerHTML = modifyContent;
+
+        var buttonDiv = document.querySelector('#buttonDiv');
+
+        if (buttonDiv) {
+            searchTab.removeChild(buttonDiv);
+        }
+
+        this.createButton();
+    }
+
+    function createButton() {
+        firstSearch = true;
+
+        var searchDiv = document.querySelector('#searchTab');
+
+        var buttonDiv = document.createElement('div');
+        buttonDiv.position = 'relative';
+        buttonDiv.id = 'buttonDiv';
+        buttonDiv.width = '300px';
+        searchDiv.appendChild(buttonDiv);
+
+        var prevButton = document.createElement('button');
+        prevButton.id = 'prevButton';
+        prevButton.onclick = prevEvent;
+        var prevText = document.createTextNode('prev');
+        prevButton.appendChild(prevText);
+        buttonDiv.appendChild(prevButton);
+
+        var nextButton = document.createElement('button');
+        nextButton.id = 'nextButton';
+        nextButton.onclick = nextEvent;
+        var nextText = document.createTextNode('next');
+        nextButton.appendChild(nextText);
+        buttonDiv.appendChild(nextButton);
+
+        var exitButton = document.createElement('button');
+        exitButton.id = 'exitButton';
+        exitButton.onclick = exitEvent;
+        var exitText = document.createTextNode('종료');
+        exitButton.appendChild(exitText);
+        buttonDiv.appendChild(exitButton);
+
+        this.nextEvent();
+    }
+
+    function prevEvent() {
+        var content = document.querySelector('#content');
+        var searchText = document.querySelectorAll('.find');
+        var len = searchText.length;
+
+        if(searchCurrent === 0) {
+            searchCurrent = len - 1;
+            searchText[0].style.background = '';
+            searchText[searchCurrent].style.background = 'red';
+            content.scrollTop = searchText[searchCurrent].offsetTop;
+        } else {
+            searchCurrent--;
+
+            searchText[searchCurrent+1].style.background = '';
+            searchText[searchCurrent].style.background = 'red';
+            content.scrollTop = searchText[searchCurrent].offsetTop;
+        }
+    }
+
+    function nextEvent() {
+        var content = document.querySelector('#content');
+        var searchText = document.querySelectorAll('.find');
+        var len = searchText.length;
+
+        if(searchCurrent === len-1) {
+            searchCurrent = 0;
+            searchText[len-1].style.background = '';
+            searchText[searchCurrent].style.background = 'red';
+            content.scrollTop = searchText[searchCurrent].offsetTop;
+        } else if(firstSearch === true) {
+            searchText[0].style.background = 'red';
+            content.scrollTop = searchText[0].offsetTop;
+            firstSearch = false;
+        } else {
+            searchCurrent++;
+
+            searchText[searchCurrent-1].style.background = '';
+            searchText[searchCurrent].style.background = 'red';
+            content.scrollTop = searchText[searchCurrent].offsetTop;
+        }
+    }
+
+    function exitEvent() {
+        var buttonDiv = document.querySelector('#buttonDiv');
+        var searchTab = document.querySelector('#searchTab');
+
+        var content = document.querySelector('#content');
+        var contents = content.outerText;
+
+        content.innerText = contents;
+
+        if (buttonDiv) {
+            searchTab.removeChild(buttonDiv);
+        }
+    }
+
+    /** Replace searchAll */
+    function replaceAll(str, searchStr, replaceStr) {
+        return str.split(searchStr).join(replaceStr);
+    }
+</script>
+</html>
